@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login_UIs.Pages.Flow1.LoginOrSignup"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,80,0,20">
+                <Image Source="icon" HeightRequest="100" Aspect="AspectFit"/>
+                <Label Text="Avigo" FontSize="50" VerticalTextAlignment="Center" FontFamily="PSemiBold" 
+                       HorizontalOptions="Start" Margin="10,15,10,0" FontAttributes="Bold"/>
+            </StackLayout>
+            
+            <!--Tagline-->
+            <Label Text="Search less,&#10;Travel more!" FontSize="40" TextColor="Black" FontFamily="PSemiBold"
+                   HorizontalTextAlignment="Center" HorizontalOptions="Center" Margin="0,10,0,0"/>
+
+            <Label Text="Great experiences at backpacker prices." FontSize="15" TextColor="Black" 
+                   FontFamily="PReg" Margin="10,0,10,0" HorizontalOptions="Center"/>
+
+            <Frame Style="{StaticResource ButtonFrame}" BackgroundColor="#7b3be9" HasShadow="True" Margin="20,70,20,0">
+                <Label Text="Create an account" TextTransform="Uppercase" FontSize="17" FontFamily="PMed" Margin="0,03,0,0"
+                       HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontAttributes="None"/>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Signup"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            <Frame Style="{StaticResource ButtonFrame}">
+                <Label Text="Log in" TextTransform="Uppercase" FontSize="17" FontFamily="PMed" Margin="0,03,0,0"
+                       HorizontalOptions="Center" VerticalOptions="Center" TextColor="#7b3be9" FontAttributes="None"/>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Login"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            
+            <!--Terms and conditions-->
+            <Label HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="60,10,60,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="By creating an account you agree to our "/>
+                        <Span Text="Terms and Conditions" TextDecorations="Underline" TextColor="#7b3be9"/>
+                        <Span Text=" and "/>
+                        <Span Text="Privacy Policy" TextDecorations="Underline" TextColor="#7b3be9"/>
+                        <Span Text="."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

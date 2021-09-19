@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login_UIs.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="SelectableItemsView">
+                <Setter Property="BackgroundColor" Value="#7b3be9"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="ButtonFrame">
+                <Setter Property="Padding" Value="12"/>
+                <Setter Property="HasShadow" Value="False"/>
+                <Setter Property="CornerRadius" Value="7"/>
+                <Setter Property="Margin" Value="20,10"/>
+                <Setter Property="BorderColor" Value="#7b3be9"/>
+            </Style>
+            <Style TargetType="Frame" x:Key="EntryFrame">
+                <Setter Property="Padding" Value="10,0"/>
+                <Setter Property="BackgroundColor" Value="#DCDCDC"/>
+                <Setter Property="HasShadow" Value="False"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="Margin" Value="20,10"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
