@@ -5,10 +5,10 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,80,0,20">
-                <Image Source="icon" HeightRequest="100" Aspect="AspectFit"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,100,0,20">
+                <Image Source="avigo" HeightRequest="100" Aspect="AspectFill"/>
                 <Label Text="Avigo" FontSize="50" VerticalTextAlignment="Center" FontFamily="PSemiBold" 
-                       HorizontalOptions="Start" Margin="10,15,10,0" FontAttributes="Bold"/>
+                       HorizontalOptions="Start" Margin="-20,15,10,0" FontAttributes="Bold"/>
             </StackLayout>
             
             <!--Tagline-->

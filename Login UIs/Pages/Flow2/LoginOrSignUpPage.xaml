@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login_UIs.Pages.Flow2.LoginOrSignUpPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid>
+                <Image Source="background" Aspect="AspectFill"/>
+            </Grid>
+            <Grid RowDefinitions="1.5*,auto,auto" BackgroundColor="Transparent">
+                <StackLayout>
+                    <Image Source="deliveryman" HeightRequest="200" VerticalOptions="EndAndExpand" Margin="20"/>
+                </StackLayout>
+                <Label Grid.Row="1" Text="FOOD DELIVERY SERVICE" HorizontalOptions="Center" FontFamily="PSemiBold" FontSize="30" TextColor="White"/>
+                
+                <Frame Grid.Row="2" HorizontalOptions="Center" BackgroundColor="Orange" Margin="0,150,0,50"
+                       CornerRadius="70" HeightRequest="70" WidthRequest="70" Padding="0">
+                    <Image Source="down" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,07,01,0"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="openPopup"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

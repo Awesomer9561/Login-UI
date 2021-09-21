@@ -17,7 +17,16 @@ namespace Login_UIs
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+        }
+
+        private void FLow1(object sender, EventArgs e)
+        {
             Navigation.PushAsync(new Pages.Flow1.LoginOrSignup());
+        }
+
+        private void Flow2(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Pages.Flow2.LoginOrSignUpPage());
         }
     }
 }
