@@ -11,11 +11,9 @@ namespace Login_UIs
             InitializeComponent();
             XF.Material.Forms.Material.Init(this);
 
-            MainPage = new NavigationPage(new MainPage());
-            //MainPage = new NavigationPage(new Pages.Flow2.SignUpPopup());
-            //MainPage = new NavigationPage(new Pages.Flow2.LoginOrSignUpPage());
-            //MainPage = new NavigationPage(new Pages.Flow1.SignupPage());
-            //MainPage = new NavigationPage(new Pages.Flow1.LoginOrSignup());
+            //MainPage = new NavigationPage(new MainPage());
+
+            MainPage = new NavigationPage(new Pages.Flow4.LoginorSignupPage());
         }
 
         protected override void OnStart()

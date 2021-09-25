@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="Login_UIs.Pages.Flow3.LoginorSignupPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="AliceBlue">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <pancake:PancakeView Padding="0" HeightRequest="400" WidthRequest="400" CornerRadius="0,0,50,50" Margin="10" BackgroundColor="#ad71d9" HorizontalOptions="CenterAndExpand">
+                <lottie:AnimationView Animation="working.json" HeightRequest="400" WidthRequest="400"
+                                      AutoPlay="True" RepeatMode="Infinite" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/> 
+            </pancake:PancakeView>
+
+            <Label Text="Discover your dream job here!" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="40"
+                   FontFamily="PSemiBold" FontSize="40"/>
+
+            <pancake:PancakeView Padding="0" CornerRadius="25" WidthRequest="300" HeightRequest="75" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand">
+                <pancake:PancakeView.Border>
+                    <pancake:Border Thickness="8" Color="White"/>
+                </pancake:PancakeView.Border>
+                <Grid>
+                    <Grid ColumnDefinitions="*,*" Margin="1">
+                        <pancake:PancakeView Grid.Column="0" BackgroundColor="Transparent" x:Name="leftSide" CornerRadius="20,0,20,0">
+                            <pancake:PancakeView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="leftClicked"/>
+                            </pancake:PancakeView.GestureRecognizers>
+                        </pancake:PancakeView>
+
+                        <pancake:PancakeView Grid.Column="1" BackgroundColor="Transparent" x:Name="rightSide" CornerRadius="0,20,0,20">
+                            <pancake:PancakeView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="rightClicked"/>
+                            </pancake:PancakeView.GestureRecognizers>
+                        </pancake:PancakeView>
+                    </Grid>
+                    <Frame Padding="0" HeightRequest="70" WidthRequest="150" HorizontalOptions="StartAndExpand" x:Name="Option"
+                           VerticalOptions="CenterAndExpand" BackgroundColor="White" CornerRadius="20" Margin="4,2"></Frame>
+                    <Grid ColumnDefinitions="*,*">
+                        <Label Text="Log In" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontFamily="PMed" FontSize="20">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="leftClicked"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Text="Sign up" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontFamily="PMed" FontSize="20">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="rightClicked"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Grid>
+                </Grid>
+            </pancake:PancakeView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

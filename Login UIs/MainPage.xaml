@@ -7,6 +7,7 @@
     <StackLayout VerticalOptions="CenterAndExpand" Margin="15,0">
         <Button Text="Login Flow 1" Clicked="FLow1"/>
         <Button Text="Login Flow 2" Clicked="Flow2"/>
+        <Button Text="Login Flow 3" Clicked="Flow3"/>
         
     </StackLayout>
 

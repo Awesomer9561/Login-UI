@@ -28,5 +28,10 @@ namespace Login_UIs
         {
             Navigation.PushAsync(new Pages.Flow2.LoginOrSignUpPage());
         }
+
+        private void Flow3(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Pages.Flow3.LoginorSignupPage());
+        }
     }
 }

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material" 
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="AliceBlue"
+             x:Class="Login_UIs.Pages.Flow3.SignUpPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Let's get started!" FontSize="40" FontFamily="PMed" Margin="0,40,0,0" HorizontalOptions="Center"/>
+            <Label Text="Sign in to explore our world!" HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" FontSize="25" FontFamily="PReg"/>
+
+            <!--Entry-->
+            <Frame Style="{StaticResource EntryFrame}" Padding="10,5" CornerRadius="20" BackgroundColor="White" Margin="25,50,25,10">
+                <material:MaterialTextField Placeholder="Name" PlaceholderFontFamily="PReg" TextFontFamily="PReg" CardBackgroundColor="White"
+                                        UnderlineColor="White" Grid.Column="1" VerticalOptions="Center" Margin="10,05,10,0"/>
+            </Frame>
+            <Frame Style="{StaticResource EntryFrame}" Padding="10,5" CornerRadius="20" BackgroundColor="White" Margin="25,0,25,10">
+                <material:MaterialTextField Placeholder="Email" PlaceholderFontFamily="PReg" TextFontFamily="PReg" CardBackgroundColor="White"
+                                        UnderlineColor="White" Grid.Column="1" VerticalOptions="Center" Margin="10,05,10,0"/>
+            </Frame>
+            <Frame Style="{StaticResource EntryFrame}" Padding="10,5" CornerRadius="20" BackgroundColor="White" Margin="25,0,25,0">
+                <material:MaterialTextField Placeholder="Password" PlaceholderFontFamily="PReg" TextFontFamily="PReg" CardBackgroundColor="White"
+                                        UnderlineColor="White" Grid.Column="1" VerticalOptions="Center" Margin="10,05,10,0"/>
+            </Frame>
+
+            <!--Login Button-->
+            <Frame CornerRadius="15" Padding="15" BackgroundColor="LightCoral" Margin="25,40,25,0">
+                <Label Text="Sign up" TextTransform="Uppercase" TextColor="White" FontFamily="PMed" FontSize="20" Margin="0,3,0,0"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </Frame>
+
+            <!--or Continue with-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,15">
+                <Line X1="0" X2="80" Y1="0" Y2="0" Stroke="gray" StrokeThickness="3" VerticalOptions="CenterAndExpand"/>
+                <Label Text="or register using" VerticalOptions="Center" FontSize="15" FontFamily="PReg"/>
+                <Line X1="0" X2="80" Y1="0" Y2="0" Stroke="gray" StrokeThickness="3" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <!--Logo-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <pancake:PancakeView Padding="0" HeightRequest="60" WidthRequest="80" Margin="10" BackgroundColor="Transparent"
+                                 CornerRadius="15">
+                    <Image Source="google" Aspect="AspectFit" Margin="15"/>
+                    <pancake:PancakeView.Border>
+                        <pancake:Border Thickness="5" Color="White"/>
+                    </pancake:PancakeView.Border>
+                </pancake:PancakeView>
+
+                <pancake:PancakeView Padding="0" HeightRequest="60" WidthRequest="80" Margin="10" BackgroundColor="Transparent"
+                                 CornerRadius="15">
+                    <Image Source="facebook" Aspect="AspectFit" Margin="15"/>
+                    <pancake:PancakeView.Border>
+                        <pancake:Border Thickness="5" Color="White"/>
+                    </pancake:PancakeView.Border>
+                </pancake:PancakeView>
+
+                <pancake:PancakeView Padding="0" HeightRequest="60" WidthRequest="80" Margin="10" BackgroundColor="Transparent"
+                                 CornerRadius="15">
+                    <Image Source="twitter" Aspect="AspectFit" Margin="15"/>
+                    <pancake:PancakeView.Border>
+                        <pancake:Border Thickness="5" Color="White"/>
+                    </pancake:PancakeView.Border>
+                </pancake:PancakeView>
+            </StackLayout>
+
+            <Label FontSize="15" FontFamily="PReg" Margin="30,15" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Already a member? "/>
+                        <Span Text=" Login now" TextColor="LightCoral">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="gotoLoginPage"/>
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

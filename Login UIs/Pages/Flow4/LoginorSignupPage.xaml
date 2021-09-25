@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:myentry="clr-namespace:Login_UIs.Misc" 
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Login_UIs.Pages.Flow4.LoginorSignupPage">
+    <ContentPage.Content>
+        <Grid>
+            <Label Text="Need help ?" FontSize="17" FontAttributes="Bold" TextTransform="Uppercase" TextColor="Blue" HorizontalOptions="End" Margin="0,20,20,0"/>
+
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="0,-100,0,0">
+                <lottie:AnimationView Animation="working.json" HeightRequest="200" WidthRequest="200"
+                                      AutoPlay="True" RepeatMode="Infinite" HorizontalOptions="Start" Margin="-30,0,0,-40"/>
+
+                <Label Text="Let's Get Started" FontSize="25" Margin="20,0" FontFamily="RMed" TextColor="Black" />
+                <Label Text="We will send you an OTP to your mobile number" Margin="20,0,20,20" FontSize="15" FontFamily="RReg"/>
+
+                <!--Entry-->
+                <Grid ColumnDefinitions="*,auto" Margin="20,10">
+                    <pancake:PancakeView Padding="10" CornerRadius="3" Focused="EntryFocused" Unfocused="EntryUnfocused" x:Name="EntryFrame">
+                        <pancake:PancakeView.Border>
+                            <pancake:Border Thickness="2" Color="#d0d9f2"/>
+                        </pancake:PancakeView.Border>
+                        <myentry:MyEntry Placeholder="Enter Mobile Number" x:Name="PhoneEntry" Focused="EntryFocused" MaxLength="10"/>
+                    </pancake:PancakeView>
+
+                    <pancake:PancakeView Padding="15,10" CornerRadius="3" HorizontalOptions="End" HeightRequest="40" Grid.Column="1"
+                                     x:Name="NextButton" BackgroundColor="#d0d9f2" WidthRequest="40">
+                        <pancake:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="NextBtn"/>
+                        </pancake:PancakeView.GestureRecognizers>
+                        <ImageButton Source="whiteback" HeightRequest="20" Clicked="NextBtn" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    </pancake:PancakeView>
+                </Grid>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <CheckBox Color="Blue" VerticalOptions="Center" CheckedChanged="NextBtnActivate" x:Name="checkBox"/>
+                    <Label VerticalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="I have reaad and understood the  "/>
+                                <Span Text="Terms and Privacy Policy" TextColor="Blue"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
